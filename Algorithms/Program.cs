@@ -12,10 +12,13 @@ namespace Algorithms
         {
             int[] a = new int[7] { 5, 2, 9, 3, 8, 7, 4 };
             BublleSort(a);
+            
+           
             Console.WriteLine();
             SelectionSort(a);
             Console.WriteLine();
             InsertionSort(a);
+            Console.WriteLine(LinearSearch());
 
 
 
@@ -41,7 +44,18 @@ namespace Algorithms
             }
         }
 
-
+        public static bool LinearSearch()
+        {
+           int[] a =new int[]{1,4,8,20,50,70 };
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] == 17)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         public static void SelectionSort(int[] a)
         {
             for (int i = 0; i < a.Length - 1; i++)
